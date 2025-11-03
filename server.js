@@ -40,7 +40,6 @@ app.use(
     credentials: true,
   })
 );
-app.use(cors({ origin: "*" }));
 
 // Routes
 app.use("/api/auth", authRoutes);
