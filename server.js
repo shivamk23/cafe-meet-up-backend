@@ -32,10 +32,15 @@ app.use(bodyParser.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: ["http://localhost:5173", "http://localhost:8080"],
+    origin: [
+      "http://localhost:5173",
+      "http://localhost:8080",
+      "https://cafemeetups.com",
+    ],
     credentials: true,
   })
 );
+app.use(cors({ origin: "*" }));
 
 // Routes
 app.use("/api/auth", authRoutes);
